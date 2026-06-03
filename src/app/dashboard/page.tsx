@@ -6,8 +6,22 @@ import TeamRadios from "@/components/dashboard/TeamRadios";
 import TrackViolations from "@/components/dashboard/TrackViolations";
 import Map from "@/components/dashboard/Map";
 import Footer from "@/components/Footer";
+import NoSession from "@/components/NoSession";
+import { useDataStore } from "@/stores/useDataStore";
 
 export default function Page() {
+	const connected = useDataStore((state) => state.state !== null);
+	const hasSession = useDataStore((state) => state.state?.SessionInfo != null);
+
+	if (!connected || !hasSession) {
+		return (
+			<div className="flex h-full flex-col">
+				<NoSession />
+				<Footer />
+			</div>
+		);
+	}
+
 	return (
 		<div className="flex w-full flex-col gap-2">
 			<div className="flex w-full flex-col gap-2 2xl:flex-row">

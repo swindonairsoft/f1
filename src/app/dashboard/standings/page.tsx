@@ -6,12 +6,24 @@ import NumberDiff from "@/components/NumberDiff";
 import Image from "next/image";
 
 export default function Standings() {
+	const hasData = useDataStore((state) => state.state != null);
+
 	const driverStandings = useDataStore((state) => state.state?.ChampionshipPrediction?.Drivers);
 	const teamStandings = useDataStore((state) => state.state?.ChampionshipPrediction?.Teams);
 
 	const drivers = useDataStore((state) => state.state?.DriverList);
 
 	const isRace = useDataStore((state) => state.state?.SessionInfo?.Type === "Race");
+
+	if (!hasData) {
+		return (
+			<div className="flex h-full w-full flex-col items-center justify-center gap-2 text-zinc-400">
+				<div className="text-5xl">🏁</div>
+				<p className="text-xl font-medium text-white">No active session</p>
+				<p className="text-sm text-zinc-500">Championship standings will appear here during a race</p>
+			</div>
+		);
+	}
 
 	if (!isRace) {
 		return (
