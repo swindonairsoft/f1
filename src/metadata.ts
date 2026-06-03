@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 
-const title = "Chris Zulu | Formula 1 live timing";
+const title = "Zulu's F1 Dash | Formula 1 live timing";
 const description =
 	"Experience live telemetry and timing data from Formula 1 races. Get insights into leaderboards, tire choices, gaps, lap times, sector times, team radios, and more.";
 
-const url = "https://f1-chriszulu.vercel.app";
+const url = "https://f1-swindonairsoft.vercel.app";
 
 export const metadata: Metadata = {
 	generator: "Next.js",
-
-	applicationName: title,
-
+	applicationName: "Zulu's F1 Dash",
 	title,
 	description,
 
@@ -19,10 +17,10 @@ export const metadata: Metadata = {
 		description,
 		url,
 		type: "website",
-		siteName: "Chris Zulu F1 Dashboard",
+		siteName: "Zulu's F1 Dash",
 		images: [
 			{
-				alt: "Realtime Formula 1 Dashboard",
+				alt: "Zulu's Realtime Formula 1 Dashboard",
 				url: `${url}/og-image.png`,
 				width: 1200,
 				height: 630,
@@ -37,7 +35,7 @@ export const metadata: Metadata = {
 		images: [
 			{
 				url: `${url}/twitter-image.png`,
-				alt: "Realtime Formula 1 Dashboard",
+				alt: "Zulu's Realtime Formula 1 Dashboard",
 				width: 1200,
 				height: 630,
 			},
@@ -45,9 +43,7 @@ export const metadata: Metadata = {
 	},
 
 	category: "Sports & Recreation",
-
 	referrer: "strict-origin-when-cross-origin",
-
 	keywords: ["Formula 1", "f1 dashboard", "realtime telemetry", "f1 timing", "live updates"],
 
 	creator: "Chris Zulu",
@@ -56,7 +52,7 @@ export const metadata: Metadata = {
 
 	appleWebApp: {
 		capable: true,
-		title: "Chris Zulu F1",
+		title: "Zulu's F1 Dash",
 		statusBarStyle: "black-translucent",
 	},
 
@@ -67,7 +63,6 @@ export const metadata: Metadata = {
 	},
 
 	metadataBase: new URL(url),
-
 	alternates: {
 		canonical: url,
 	},

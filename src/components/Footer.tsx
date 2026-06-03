@@ -1,22 +1,8 @@
-import Link from "next/link";
-
 export default function Footer() {
 	return (
 		<footer className="my-8 text-sm text-zinc-500">
 			<div className="mb-4 flex flex-wrap gap-2">
-				<p>
-					Made with ♥ by <TextLink website="#">Chris Zulu</TextLink>.
-				</p>
-
-				<p>
-					Get{" "}
-					<Link className="text-blue-500" href="/help">
-						Help
-					</Link>
-					.
-				</p>
-
-				<p>Version: {process.env.version}</p>
+				<p>Zulu&apos;s F1 Dash &mdash; by Chris Zulu.</p>
 			</div>
 
 			<p>
@@ -27,16 +13,3 @@ export default function Footer() {
 		</footer>
 	);
 }
-
-type TextLinkProps = {
-	website: string;
-	children: string;
-};
-
-const TextLink = ({ website, children }: TextLinkProps) => {
-	return (
-		<a className="text-blue-500" target="_blank" href={website}>
-			{children}
-		</a>
-	);
-};

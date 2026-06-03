@@ -10,10 +10,10 @@ export default function Home() {
 	return (
 		<div>
 			<section className="flex h-screen w-full flex-col items-center pt-20 sm:justify-center sm:pt-0">
-				<Image src={icon} alt="Chris Zulu F1 logo" width={200} />
+				<Image src={icon} alt="Zulu's F1 Dash logo" width={200} />
 
 				<h1 className="my-20 text-center text-5xl font-bold">
-					Real-time Formula 1 <br />
+					Zulu&apos;s Real-time Formula 1 <br />
 					telemetry and timing
 				</h1>
 
@@ -36,8 +36,8 @@ export default function Home() {
 				<h2 className="mb-4 text-2xl">What&apos;s this?</h2>
 
 				<p className="text-md">
-					A real-time telemetry and timing dashboard for Formula 1 by Chris Zulu. See live timing data of the cars on
-					track including lap times, sector times, gaps between drivers, tire choices and much more.
+					Zulu&apos;s F1 Dash — a real-time telemetry and timing dashboard for Formula 1. See live timing data of
+					the cars on track including lap times, sector times, gaps between drivers, tire choices and much more.
 				</p>
 			</section>
 		</div>
