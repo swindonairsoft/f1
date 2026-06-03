@@ -20,7 +20,7 @@ import {
 } from "@/lib/map";
 
 // This is basically fearlessly copied from
-// https://github.com/tdjsnelling/monaco
+
 
 const SPACE = 1000;
 const ROTATION_FIX = 90;
