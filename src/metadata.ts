@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
-const title = "f1-dash | Formula 1 live timing";
+const title = "Chris Zulu | Formula 1 live timing";
 const description =
 	"Experience live telemetry and timing data from Formula 1 races. Get insights into leaderboards, tire choices, gaps, lap times, sector times, team radios, and more.";
 
-const url = "https://f1-dash.com";
+const url = "https://f1-chriszulu.vercel.app";
 
 export const metadata: Metadata = {
 	generator: "Next.js",
@@ -14,14 +14,12 @@ export const metadata: Metadata = {
 	title,
 	description,
 
-	icons: "https://f1-dash.com/favicon.png",
-
 	openGraph: {
 		title,
 		description,
 		url,
 		type: "website",
-		siteName: "F1 Realtime Dashboard",
+		siteName: "Chris Zulu F1 Dashboard",
 		images: [
 			{
 				alt: "Realtime Formula 1 Dashboard",
@@ -33,10 +31,8 @@ export const metadata: Metadata = {
 	},
 
 	twitter: {
-		site: "@Slowlydev",
 		title,
 		description,
-		creator: "@Slowlydev",
 		card: "summary_large_image",
 		images: [
 			{
@@ -54,13 +50,13 @@ export const metadata: Metadata = {
 
 	keywords: ["Formula 1", "f1 dashboard", "realtime telemetry", "f1 timing", "live updates"],
 
-	creator: "Slowlydev",
-	publisher: "Slowlydev",
-	authors: [{ name: "Slowlydev", url: "https://slowly.dev" }],
+	creator: "Chris Zulu",
+	publisher: "Chris Zulu",
+	authors: [{ name: "Chris Zulu" }],
 
 	appleWebApp: {
 		capable: true,
-		title: "f1-dash",
+		title: "Chris Zulu F1",
 		statusBarStyle: "black-translucent",
 	},
 
@@ -74,10 +70,6 @@ export const metadata: Metadata = {
 
 	alternates: {
 		canonical: url,
-	},
-
-	verification: {
-		google: "hKv0h7XtWgQ-pVNVKpwwb2wcCC2f0tBQ1X1IcDX50hg",
 	},
 
 	manifest: "/manifest.json",
