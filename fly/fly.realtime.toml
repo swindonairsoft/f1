@@ -1,0 +1,21 @@
+app = "chriszulu-f1-realtime"
+primary_region = "lhr"
+
+[build]
+  image = "ghcr.io/slowlydev/f1-dash-realtime:latest"
+
+[env]
+  RUST_LOG = "realtime=info"
+  ADDRESS = "0.0.0.0:8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
