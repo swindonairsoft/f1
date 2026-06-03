@@ -38,16 +38,6 @@ type Props = {
 };
 
 export default function Sidebar({ connected }: Props) {
-	// const favoriteDrivers = useSettingsStore((state) => state.favoriteDrivers);
-	// const drivers = useDataStore((state) => state.driverList);
-
-	// const driverItems = drivers
-	// 	? favoriteDrivers.map((nr) => ({
-	// 			href: `/dashboard/driver/${nr}`,
-	// 			name: drivers[nr].fullName,
-	// 		}))
-	// 	: null;
-
 	const { opened, pinned } = useSidebarStore();
 	const close = useSidebarStore((state) => state.close);
 	const open = useSidebarStore((state) => state.open);
@@ -88,10 +78,8 @@ export default function Sidebar({ connected }: Props) {
 
 			<motion.div
 				className="no-scrollbar fixed top-0 bottom-0 left-0 z-40 flex overflow-y-auto"
-				//
 				onHoverEnd={!pinned ? () => close() : undefined}
 				onHoverStart={!pinned ? () => open() : undefined}
-				//
 				animate={{ left: pinned || opened ? 0 : -216 }}
 				transition={{ type: "spring", bounce: 0.1 }}
 			>
@@ -106,7 +94,6 @@ export default function Sidebar({ connected }: Props) {
 						<div className="flex items-center gap-2">
 							<DelayInput saveDelay={500} />
 							<DelayTimer />
-
 							<ConnectionStatus connected={connected} />
 						</div>
 
@@ -122,36 +109,13 @@ export default function Sidebar({ connected }: Props) {
 						))}
 					</div>
 
-					{/* <p className="mt-4 p-2 text-sm text-zinc-500">Favorite Drivers</p>
-
-					<div className="flex flex-col gap-1">
-						{driverItems === null && (
-							<>
-								<div className="h-8 animate-pulse rounded-lg bg-zinc-800" />
-								<div className="h-8 animate-pulse rounded-lg bg-zinc-800" />
-							</>
-						)}
-						{driverItems !== null && driverItems.length === 0 && <div className="p-2">No favorites</div>}
-						{driverItems?.map((item) => <Item key={item.href} item={item} />)}
-					</div> */}
-
 					<p className="mt-4 p-2 text-sm text-zinc-500">General</p>
 
 					<div className="flex flex-col gap-1">
 						<Item item={{ href: "/dashboard/settings", name: "Settings" }} />
-
 						<Item target="_blank" item={{ href: "/schedule", name: "Schedule" }} />
 						<Item target="_blank" item={{ href: "/help", name: "Help" }} />
 						<Item target="_blank" item={{ href: "/", name: "Home" }} />
-					</div>
-
-					<p className="mt-4 p-2 text-sm text-zinc-500">Links</p>
-
-					<div className="flex flex-col gap-1">
-						
-						
-						
-						
 					</div>
 				</nav>
 			</motion.div>
